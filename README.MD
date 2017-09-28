@@ -1,6 +1,6 @@
 ## React Preloaders Plugin
 it's fastest way to add nice preloader to your application.
-#### [vamosgs.github.io/react-preloaders](https://vamosgs.github.io/react-preloaders)
+#### [vamosgs.github.io/react-preloaders](https://vamosgs.github.io/react-preloaders/demo/)
 
 ### Setup
 Install it:
@@ -13,7 +13,7 @@ yarn add react-preloaders --save
 ```
 
 ### Get Started
-#### find full preloaders list [here](https://vamosgs.github.io/react-preloaders).
+#### find full preloaders list [here](https://vamosgs.github.io/react-preloaders/demo/).
 ```jsx
 import Lines from 'react-preloaders/Preloaders/Lines';
 
