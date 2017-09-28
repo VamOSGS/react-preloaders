@@ -33,7 +33,13 @@ class App extends Component {
     }
 }
 ```
-
+#### Add this to your webpack if you don't have css loader yet
+```js
+  {
+       test: /\.css$/,
+       use: [ 'style-loader', 'css-loader' ]
+  }
+```
 ### Properties (Props)
 <table>
   <tr>

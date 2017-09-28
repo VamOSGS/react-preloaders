@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
 import * as Preloader from '../Preloaders';
-
 import Icon from 'react-icons-kit';
 import { github } from 'react-icons-kit/icomoon/github';
-
 import { heart } from 'react-icons-kit/icomoon/heart';
-
 import { npm } from 'react-icons-kit/icomoon/npm';
 
 class App extends Component {
