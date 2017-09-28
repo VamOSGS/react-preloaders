@@ -2,7 +2,6 @@
 [![NPM version](https://badge.fury.io/js/react-preloaders.svg)](http://badge.fury.io/js/react-preloaders)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-#
 it's fastest way to add nice preloader to your application.
 #### [vamosgs.github.io/react-preloaders](https://vamosgs.github.io/react-preloaders/demo/)
 
