@@ -17,7 +17,7 @@ class App extends Component {
                 <h1>React Preloaders</h1>
                 <div className={'flex'}>
                     <div className={'code'}>
-                        <p>Find this package in <a href="#"> <Icon icon={npm} /></a>  and read more in <a href="#">  <Icon icon={github} /></a></p>
+                        <p>Find this package in <a href="https://www.npmjs.com/package/react-preloaders"> <Icon icon={npm} /></a>  and read more in <a href="https://github.com/vamosgs/react-preloaders">  <Icon icon={github} /></a></p>
                     </div>
                     <div className={'list'}>
                         <ul>
