@@ -5,11 +5,4 @@ import Lines from './Lines.jsx';
 import Circle2 from './Circle2.jsx';
 import Cube from './Cube.jsx';
 
-export  {
-    Circle,
-    Zoom,
-    Dots,
-    Lines,
-    Circle2,
-    Cube
-}
+export { Circle, Zoom, Dots, Lines, Circle2, Cube };

@@ -1,16 +1,14 @@
 @import "normalize";
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
-
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 
 body {
-
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   .wrap {
     h1 {
       text-align: center;
       font-size: 4em;
-      color: #f95759 ;
+      color: #f95759;
       padding: 20px;
     }
     .flex {
@@ -26,11 +24,12 @@ body {
         line-height: 1.5;
         width: 63%;
         font-size: 16px;
-        font-family: Inconsolata,sans-serif;
+        font-family: Inconsolata, sans-serif;
         text-align: center;
         a {
           color: #f95759;
-          transition: .35s;
+          transition: 0.35s;
+          margin: 0 5px;
           &:hover {
             color: #c34d4f;
           }
@@ -38,19 +37,19 @@ body {
       }
       .list {
         width: 100%;
-        >ul {
+        > ul {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
           width: 100%;
-          box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.15);
-          >li {
+          box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.15);
+          > li {
             width: 25vw;
             height: auto;
             position: relative;
             display: flex;
             flex-direction: column;
-            z-index: -1;
+            z-index: 1000;
             h3 {
               padding: 20px;
             }
@@ -58,7 +57,7 @@ body {
               padding: 15px;
               line-height: 1.5;
               font-size: 16px;
-              font-family: Inconsolata,sans-serif;
+              font-family: Inconsolata, sans-serif;
               //position: absolute;
               bottom: 0;
               background-color: #fff;
@@ -79,7 +78,7 @@ body {
               width: 100%;
               height: 200px;
               margin: auto;
-               #loader {
+              #loader {
                 position: unset;
               }
               &.close {
@@ -98,9 +97,9 @@ body {
     .wrap {
       .flex {
         width: 80vw;
-        .list{
-          >ul {
-            >li {
+        .list {
+          > ul {
+            > li {
               width: 30vw;
             }
           }
@@ -114,9 +113,9 @@ body {
     .wrap {
       .flex {
         width: 90vw;
-        .list{
-          >ul {
-            >li {
+        .list {
+          > ul {
+            > li {
               min-width: 80%;
             }
           }

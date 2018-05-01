@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  transition: opacity .3s linear, visibility .2s linear .3s;
+  transition: opacity 0.3s linear, visibility 0.2s linear 0.3s;
   opacity: 1;
   &.close {
     opacity: 0;

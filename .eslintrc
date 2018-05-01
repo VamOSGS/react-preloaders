@@ -1,17 +1,17 @@
 {
-  "ecmaFeatures": {
-    "modules": true,
-    "experimentalObjectRestSpread": true,
-    "jsx": true
-  },
-  "env": {
-    "browser": false,
-    "es6": true,
-    "node": true
-  },
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
   "globals": {
-    "document": false,
-    "navigator": false,
-    "window": false
+    "document": true,
+    "window": true
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": 0,
+    "react/prop-types": 0,
+    "react/no-unescaped-entities": 0,
+    "no-return-assign": 0,
+    "react/no-array-index-key": 0,
+    "react/prefer-stateless-function": 0
   }
 }
