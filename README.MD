@@ -18,17 +18,20 @@ yarn add react-preloaders --save
 ### Get Started
 #### find full preloaders list [here](https://vamosgs.github.io/react-preloaders/demo/).
 ```jsx
+import React from 'react';
 import Lines from 'react-preloaders/Preloaders/Lines';
 
 class App extends Component {
     render () {
         return (
+        <React.Fragment>
             <Lines
             color={'#f7f7f7'} //Default #2D2D2D
             bgColor={'#222'} //Default #F7F7F7
             time={1400}/> //Default #1300
 
             <YourApp/>
+         </React.Fragment>
         )
     }
 }
