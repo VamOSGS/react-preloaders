@@ -12,7 +12,7 @@ body {
       padding: 20px;
     }
     .flex {
-      width: 60vw;
+      width: 50vw;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -44,7 +44,7 @@ body {
           width: 100%;
           box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.15);
           > li {
-            width: 25vw;
+            width: 20vw;
             height: auto;
             position: relative;
             display: flex;
@@ -52,13 +52,48 @@ body {
             z-index: 1000;
             h3 {
               padding: 20px;
+              user-select: none;
             }
-            p {
-              padding: 15px;
-              line-height: 1.5;
-              font-size: 16px;
-              font-family: Inconsolata, sans-serif;
-              //position: absolute;
+            .info {
+              display: flex;
+              justify-content: center;
+              div {
+                cursor: pointer;
+                position: relative;
+                margin-left: 5px;
+                &:hover {
+                  &::before {
+                    top: 2px;
+                    opacity: 1;
+                  }
+                  svg {
+                    color: #f95759;
+                  }
+                }
+                &:active {
+                  svg {
+                    color: rgb(63, 63, 63);
+                  }
+                }
+                &::before {
+                  content: "Copy!";
+                  font-size: 12px;
+                  position: absolute;
+                  background: black;
+                  color: white;
+                  padding: 2px;
+                  border-radius: 2px;
+                  top: 10px;
+                  opacity: 0;
+                  transition: 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+                }
+              }
+              p {
+                line-height: 1.5;
+                font-size: 16px;
+                font-family: Inconsolata, sans-serif;
+                padding: 15px 0;
+              }
               bottom: 0;
               background-color: #fff;
             }
@@ -117,6 +152,10 @@ body {
           > ul {
             > li {
               min-width: 80%;
+              .info {
+                flex-direction: column-reverse;
+              }
+              
             }
           }
         }

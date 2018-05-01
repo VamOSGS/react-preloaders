@@ -21,14 +21,16 @@ export default class List extends Component {
             <li key={key}>
               <h3>{item.label}</h3>
               {item.render}
-              <p>
-                import {'{'}
-                {item.label}
-                {'}'} from 'react-preloaders';
+              <div className="info">
+                <p>
+                  import {'{'}
+                  {item.label}
+                  {'}'} from 'react-preloaders';
+                </p>
                 <CopyToClipboard text={`import {${item.label}} from 'react-preloaders';`}>
                   <Icon icon={iosCopyOutline} />
                 </CopyToClipboard>
-              </p>
+              </div>
             </li>
           ))}
         </ul>
