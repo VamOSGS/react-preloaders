@@ -23,6 +23,7 @@ exports.buildSetup = env => ({
       filename: 'index.html',
       title: TITLE,
       inject: 'body',
+      favicon: 'webpack/favicon.ico',
       minify:
         env === 'development'
           ? false

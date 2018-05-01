@@ -5,7 +5,8 @@
   "main": "./Preloaders/index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.config.js --hot",
-    "build": "webpack --config webpack/webpack.config.js"
+    "build": "webpack --config webpack/webpack.config.js",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Gegham Samvelyan",
   "license": "ISC",
@@ -49,6 +50,7 @@
   },
   "dependencies": {
     "dotenv": "^5.0.1",
+    "gh-pages": "^1.1.0",
     "node-sass": "^4.9.0",
     "react": "^16.3.2",
     "react-copy-to-clipboard": "^5.0.1",
