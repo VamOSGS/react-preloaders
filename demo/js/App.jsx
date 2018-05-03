@@ -1,12 +1,12 @@
 import React from 'react';
-import { Lines } from '../../Preloaders';
 import Header from './Header';
 import Footer from './Footer';
 import List from './List';
+import { Cube } from '../../lib';
 
 const App = () => (
   <div className="wrap">
-    <Lines color="#f95759" />
+    <Cube />
     <h1>React Preloaders</h1>
     <div className="flex">
       <Header />

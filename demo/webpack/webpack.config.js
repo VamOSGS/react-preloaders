@@ -14,7 +14,6 @@ const cleanOptions = {
   verbose: true,
   dry: false,
 };
-
 const common = {
   entry: PATHS.APP,
   output: {
@@ -54,8 +53,8 @@ const common = {
     rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,

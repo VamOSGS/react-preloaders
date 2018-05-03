@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import './css/Circle.css';
+import React, { Component } from "react";
+import "./css/Circle.css";
 
 class Circle extends Component {
   componentDidMount() {
     document.onreadystatechange = () => {
-      if (document.readyState === 'complete') {
+      if (document.readyState === "complete") {
         setTimeout(() => {
-          document.getElementById('preloader').classList.add('close');
+          document.getElementById("preloader").classList.add("close");
         }, this.props.time);
       }
     };
@@ -32,6 +32,6 @@ class Circle extends Component {
   }
 }
 
-Circle.defaultProps = { time: 1300, bgColor: '#f7f7f7', color: '#2D2D2D' };
+Circle.defaultProps = { time: 1300, bgColor: "#f7f7f7", color: "#2D2D2D" };
 
 export default Circle;

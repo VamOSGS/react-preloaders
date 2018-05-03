@@ -2,4 +2,7 @@
 /.idea
 yarn-error.log
 dist
-.env
+demo/node_modules
+demo/dist
+demo/.env
+build

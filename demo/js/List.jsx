@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { iosCopyOutline } from 'react-icons-kit/ionicons/iosCopyOutline';
 import Icon from 'react-icons-kit';
-import { Circle, Zoom, Cube, Circle2, Lines, Dots } from '../../Preloaders';
+import { Circle, Zoom, Cube, Circle2, Lines, Dots } from '../../lib';
 
 const preloaders = [
   { label: 'Dots', render: <Dots /> },

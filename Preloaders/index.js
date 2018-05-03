@@ -1,8 +1,8 @@
-import Circle from './Circle.jsx';
-import Zoom from './Zoom.jsx';
-import Dots from './Dots.jsx';
-import Lines from './Lines.jsx';
-import Circle2 from './Circle2.jsx';
-import Cube from './Cube.jsx';
+import Circle from "./Circle";
+import Zoom from "./Zoom";
+import Dots from "./Dots";
+import Lines from "./Lines";
+import Circle2 from "./Circle2";
+import Cube from "./Cube";
 
-export { Circle, Zoom, Dots, Lines, Circle2, Cube };
+export {  Circle, Zoom, Dots, Lines, Circle2, Cube };
