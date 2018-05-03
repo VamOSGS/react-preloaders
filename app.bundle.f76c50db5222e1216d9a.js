@@ -135,7 +135,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./demo/index.js","react"]);
+/******/ 	deferredModules.push(["./js/index.js","react"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
