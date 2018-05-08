@@ -46,12 +46,37 @@ class App extends Component {
 }
 ```
 
+#### CSS loading
+Packages you nee
+```bash
+style-loader css-loader
+```
+more if you want to extract css you need
+```bash
+extract-text-webpack-plugin
+```
 #### Add this to your webpack if you don't have css loader yet
-
 ```js
 {
   test: /\.css$/,
   use: [ 'style-loader', 'css-loader' ]
+}
+```
+#### Extract 
+```js
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractCSS = new ExtractTextPlugin('style.[hash].css');
+
+module.exports = {
+  plugins: [extractCSS],
+  module: {
+      rules: [
+        {
+          test: /\.css$/,
+          use: extractCSS.extract(['css-loader', 'postcss-loader']),
+        }
+      ]
+    }
 }
 ```
 
