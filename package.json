@@ -1,13 +1,13 @@
 {
   "name": "react-preloaders",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Package for adding preloaders to your apps",
   "main": "./lib/index.js",
   "author": "Gegham Samvelyan",
   "license": "ISC",
   "scripts": {
     "start": "react-scripts start",
-    "compile": "babel preloaders --out-dir lib --presets=es2015,react",
+    "compile": "babel preloaders --out-dir lib --plugins babel-plugin-transform-es2015-modules-umd --presets=es2015,react",
     "deploy": "cd ./demo && yarn deploy"
   },
   "repository": {
@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1"
   }
