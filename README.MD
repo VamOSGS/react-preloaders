@@ -27,7 +27,7 @@ yarn add react-preloaders --save
 
 ```jsx
 import React from 'react';
-import Lines from 'react-preloaders/Preloaders/Lines';
+import { Lines } from 'react-preloaders';
 
 class App extends Component {
   render() {
