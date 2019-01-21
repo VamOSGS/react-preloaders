@@ -1,9 +1,9 @@
-@import "normalize";
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-@import url("https://fonts.googleapis.com/css?family=Inconsolata");
+@import 'normalize';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   .wrap {
     h1 {
       text-align: center;
@@ -76,7 +76,7 @@ body {
                   }
                 }
                 &::before {
-                  content: "Copy!";
+                  content: 'Copy!';
                   font-size: 12px;
                   position: absolute;
                   background: black;
