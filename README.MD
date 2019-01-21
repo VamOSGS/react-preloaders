@@ -23,7 +23,7 @@ yarn add react-preloaders --save
 
 ### Get Started
 
-#### find full preloaders list [here](https://vamosgs.github.io/react-preloaders/demo/).
+#### find full preloaders list [here](https://vamosgs.github.io/react-preloaders/).
 
 ```jsx
 import React from 'react';
