@@ -26,16 +26,16 @@ yarn add react-preloaders --save
 #### find full preloaders list [here](https://vamosgs.github.io/react-preloaders/demo/).
 
 ```jsx
-import React from "react";
-import Lines from "react-preloaders/Preloaders/Lines";
+import React from 'react';
+import Lines from 'react-preloaders/Preloaders/Lines';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
         <Lines
-          color={"#f7f7f7"} //Default #2D2D2D
-          bgColor={"#222"} //Default #F7F7F7
+          color={'#f7f7f7'} //Default #2D2D2D
+          bgColor={'#222'} //Default #F7F7F7
           time={1400} //Default #1300
         />
 
@@ -47,22 +47,38 @@ class App extends Component {
 ```
 
 #### CSS loading
-Packages you nee
+
+Packages you need
+
 ```bash
 style-loader css-loader
 ```
+
 more if you want to extract css you need
+
+#### Extract ( webpack 3.x )
+
 ```bash
 extract-text-webpack-plugin
 ```
+
+#### Extract ( webpack 4.x )
+
+```bash
+mini-css-extract-plugin
+```
+
 #### Add this to your webpack if you don't have css loader yet
+
 ```js
 {
   test: /\.css$/,
   use: [ 'style-loader', 'css-loader' ]
 }
 ```
-#### Extract 
+
+#### Extract ( webpack 3.x )
+
 ```js
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const extractCSS = new ExtractTextPlugin('style.[hash].css');
@@ -70,14 +86,48 @@ const extractCSS = new ExtractTextPlugin('style.[hash].css');
 module.exports = {
   plugins: [extractCSS],
   module: {
-      rules: [
-        {
-          test: /\.css$/,
-          use: extractCSS.extract(['css-loader', 'postcss-loader']),
-        }
-      ]
-    }
-}
+    rules: [
+      {
+        test: /\.css$/,
+        use: extractCSS.extract(['css-loader', 'postcss-loader'])
+      }
+    ]
+  }
+};
+```
+
+#### Extract ( webpack 4.x )
+
+```js
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+module.exports = {
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: '[name].css',
+      chunkFilename: '[id].css'
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it use publicPath in webpackOptions.output
+              publicPath: '../'
+            }
+          },
+          'css-loader'
+        ]
+      }
+    ]
+  }
+};
 ```
 
 ### Properties (Props)
