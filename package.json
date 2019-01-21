@@ -1,6 +1,6 @@
 {
   "name": "react-preloaders",
-  "version": "2.1.5",
+  "version": "2.1.4",
   "description": "Package for adding preloaders to your apps",
   "main": "./lib/index.js",
   "author": "Gegham Samvelyan",
