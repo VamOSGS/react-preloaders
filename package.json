@@ -4,7 +4,7 @@
   "description": "Package for adding preloaders to your apps",
   "main": "./lib/index.js",
   "author": "Gegham Samvelyan",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "compile": "babel preloaders --out-dir lib --plugins babel-plugin-transform-es2015-modules-umd --presets react",
@@ -26,6 +26,7 @@
   "dependencies": {
     "react": "^16.3.2"
   },
+  "homepage": "https://vamosgs.github.io/react-preloaders/",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
