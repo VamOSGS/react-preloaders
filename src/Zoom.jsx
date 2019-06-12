@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/Zoom.css';
+// import './css/Zoom.css';
 
 class Zoom extends Component {
   componentDidMount() {

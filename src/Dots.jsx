@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/Dots.css';
+// import './css/Dots.css';
 
 class Dots extends Component {
   componentDidMount() {

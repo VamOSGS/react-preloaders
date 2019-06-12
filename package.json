@@ -1,14 +1,13 @@
 {
   "name": "react-preloaders",
   "version": "2.1.4",
-  "description": "Package for adding preloaders to your apps",
+  "description": "Package for adding preloaders to your React apps",
   "main": "./lib/index.js",
   "author": "Gegham Samvelyan",
   "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "compile": "babel preloaders --out-dir lib --plugins babel-plugin-transform-es2015-modules-umd --presets react",
-    "deploy": "cd ./demo && yarn deploy"
+    "deploy": "cd ./demo && yarn deploy",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -24,12 +23,26 @@
     "react-component"
   ],
   "dependencies": {
-    "react": "^16.3.2"
+    "@babel/preset-env": "^7.4.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.1"
   },
   "homepage": "https://vamosgs.github.io/react-preloaders/",
   "devDependencies": {
+    "@babel/core": "^7.4.5",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.11.0",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3"
   }
 }

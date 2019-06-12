@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/Circle2.css';
+// import './css/Circle2.css';
 
 class Circle2 extends Component {
   componentDidMount() {

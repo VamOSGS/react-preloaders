@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/Lines.css';
+// import './css/Lines.css';
 
 class Lines extends Component {
   componentDidMount() {

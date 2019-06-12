@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './css/Cube.css';
+import React, { Component, useEffect, useState } from 'react';
+// import './css/Cube.css';
 
 class Cube extends Component {
   componentDidMount() {
@@ -16,7 +16,10 @@ class Cube extends Component {
     return (
       <div style={{ backgroundColor: this.props.bgColor }} id="preloader">
         <span style={{ borderColor: this.props.color }} className="loader">
-          <span style={{ backgroundColor: this.props.color }} className="loader-inner" />
+          <span
+            style={{ backgroundColor: this.props.color }}
+            className="loader-inner"
+          />
         </span>
       </div>
     );
