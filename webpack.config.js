@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src',
   output: {
     path: path.resolve(__dirname, 'lib'),
     filename: 'index.js',
@@ -12,6 +12,7 @@ module.exports = {
     modules: ['node_modules', path.resolve('src')],
     extensions: ['.js', '.jsx'],
   },
+
   module: {
     rules: [
       {

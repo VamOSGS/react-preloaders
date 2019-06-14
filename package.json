@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "deploy": "cd ./demo && yarn deploy",
-    "build": "webpack"
+    "build": "webpack",
+    "build:dev": "webpack --watch",
+    "start:demo": "cd ./demo && yarn start"
   },
   "repository": {
     "type": "git",
