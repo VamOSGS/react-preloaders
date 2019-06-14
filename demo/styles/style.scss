@@ -30,6 +30,9 @@ body {
           color: #f95759;
           transition: 0.35s;
           margin: 0 5px;
+          font-weight: bold;
+          font-size: 17px;
+          text-decoration: none;
           &:hover {
             color: #c34d4f;
           }
@@ -113,12 +116,10 @@ body {
               width: 100%;
               height: 200px;
               margin: auto;
+              opacity: 1;
+              visibility: visible;
               #loader {
                 position: unset;
-              }
-              &.close {
-                opacity: 1;
-                visibility: visible;
               }
             }
           }
