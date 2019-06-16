@@ -6,7 +6,7 @@ exports[`StyledPreloader renders correctly 1`] = `
   id="preloader"
   loadingStatus={true}
 >
-  <Styled(CircleWithPreloader)
+  <Component
     color="#2D2D2D"
     key=".0"
   />
