@@ -2,7 +2,8 @@
   "parser": "babel-eslint",
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest/globals": true
   },
   "extends": "airbnb",
   "globals": {
@@ -16,7 +17,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "jest"],
   "rules": {
     "react/require-default-props": 0
   }

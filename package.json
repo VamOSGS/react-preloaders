@@ -1,7 +1,7 @@
 {
   "name": "react-preloaders",
   "version": "2.1.4",
-  "description": "Package for adding preloaders to your React apps",
+  "description": "🌌Package for adding preloaders to your React apps",
   "main": "./lib/index.js",
   "author": "Gegham Samvelyan",
   "license": "MIT",
@@ -9,7 +9,18 @@
     "deploy": "cd ./demo && yarn deploy",
     "build": "webpack",
     "build:dev": "webpack --watch",
-    "start:demo": "cd ./demo && yarn start"
+    "start:demo": "cd ./demo && yarn start",
+    "lint": "eslint src",
+    "lint_fix": "eslint src --fix",
+    "test": "jest"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/setupTests.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -25,7 +36,6 @@
     "react-component"
   ],
   "dependencies": {
-    "@babel/preset-env": "^7.4.5",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -33,6 +43,7 @@
   },
   "homepage": "https://vamosgs.github.io/react-preloaders/",
   "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
     "@babel/core": "^7.4.5",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
@@ -40,11 +51,17 @@
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "eslint": "^4.19.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jest": "^22.6.4",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.11.0",
+    "jest": "^24.8.0",
+    "jest-styled-components": "7.0.0-beta.1",
     "webpack": "^4.33.0",
     "webpack-cli": "^3.3.3"
   }

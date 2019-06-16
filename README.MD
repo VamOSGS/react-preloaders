@@ -1,4 +1,4 @@
-## React Preloaders Plugin
+## React Preloaders
 
 [![NPM version](https://badge.fury.io/js/react-preloaders.svg)](http://badge.fury.io/js/react-preloaders)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)

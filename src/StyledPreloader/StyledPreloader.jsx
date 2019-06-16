@@ -19,7 +19,7 @@ const Preloader = styled.div`
 `;
 
 function StyledPreloader({
-  children, bgColor, color, time,
+  children, bgColor, color, time, customLoading,
 }) {
   const [loading, setLoading] = useState(true);
   const childrenWithProp = React.Children.map(children, child => React.cloneElement(child, {
@@ -41,8 +41,8 @@ function StyledPreloader({
         }, time);
       }
     };
-  }, []);
-
+  }, [null]);
+  console.log(customLoading);
   return (
     <Preloader bgColor={bgColor} loadingStatus={loading} id="preloader">
       {childrenWithProp}
@@ -55,6 +55,7 @@ StyledPreloader.propTypes = {
   bgColor: PropTypes.string,
   color: PropTypes.string,
   children: PropTypes.element,
+  customLoading: PropTypes.bool,
 };
 
 StyledPreloader.defaultProps = { time: 1300, bgColor: '#f7f7f7', color: '#2D2D2D' };

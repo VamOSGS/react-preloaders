@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledPreloader renders correctly 1`] = `
+<styled.div
+  bgColor="#f7f7f7"
+  id="preloader"
+  loadingStatus={true}
+>
+  <Styled(CircleWithPreloader)
+    color="#2D2D2D"
+    key=".0"
+  />
+</styled.div>
+`;
