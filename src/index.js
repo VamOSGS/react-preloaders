@@ -1,9 +1,9 @@
 import Circle from './Circle/StyledCircle';
-import Zoom from './Zoom';
-import Dots from './Dots';
-import Lines from './Lines';
-import Circle2 from './Circle2';
-import Cube from './Cube';
+import Zoom from './Zoom/StyledZoom';
+import Dots from './Dots/StyledDots';
+import Lines from './Lines/StyledLines';
+import Circle2 from './Circle2/StyledCircle2';
+import Cube from './Cube/StyledCube';
 
 export {
   Circle, Zoom, Dots, Lines, Circle2, Cube,

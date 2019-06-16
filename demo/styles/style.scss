@@ -118,7 +118,7 @@ body {
               margin: auto;
               opacity: 1;
               visibility: visible;
-              #loader {
+              > div {
                 position: unset;
               }
             }

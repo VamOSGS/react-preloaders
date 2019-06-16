@@ -97,31 +97,25 @@ body {
 }
 #loader li:nth-child(1) {
   left: 0;
-  -webkit-animation: sequence1 1s ease infinite 0;
   animation: sequence1 1s ease infinite 0;
 }
 #loader li:nth-child(2) {
   left: 15px;
-  -webkit-animation: sequence2 1s ease infinite 0.1s;
   animation: sequence2 1s ease infinite 0.1s;
 }
 #loader li:nth-child(3) {
   left: 30px;
-  -webkit-animation: sequence1 1s ease-in-out infinite 0.2s;
   animation: sequence1 1s ease-in-out infinite 0.2s;
 }
 #loader li:nth-child(4) {
   left: 45px;
-  -webkit-animation: sequence2 1s ease-in infinite 0.3s;
   animation: sequence2 1s ease-in infinite 0.3s;
 }
 #loader li:nth-child(5) {
   left: 60px;
-  -webkit-animation: sequence1 1s ease-in-out infinite 0.4s;
   animation: sequence1 1s ease-in-out infinite 0.4s;
 }
 #loader li:nth-child(6) {
   left: 75px;
-  -webkit-animation: sequence2 1s ease infinite 0.5s;
   animation: sequence2 1s ease infinite 0.5s;
 }

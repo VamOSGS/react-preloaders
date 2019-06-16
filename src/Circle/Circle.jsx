@@ -15,10 +15,10 @@ const Circle = ({ className, color }) => (
     />
   </svg>
 );
-const withPreloader = ({ className }) => (
+const CircleWithPreloader = ({ className }) => (
   <StyledPreloader>
     <Circle className={className} />
   </StyledPreloader>
 );
 
-export default withPreloader;
+export default CircleWithPreloader;

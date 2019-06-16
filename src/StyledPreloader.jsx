@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 const Preloader = styled.div`
-  background: ${props => props.bgColor};
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -13,29 +12,38 @@ const Preloader = styled.div`
   align-items: center;
   display: flex;
   transition: opacity 0.3s linear, visibility 0.2s linear 0.3s;
-  opacity: ${props => (props.loading ? 1 : 0)};
-  visibility: ${props => (props.loading ? 'visible' : 'hidden')};
+  background: ${props => props.bgColor};
+  opacity: ${props => (props.loadingStatus ? 1 : 0)};
+  visibility: ${props => (props.loadingStatus ? 'visible' : 'hidden')};
 `;
-function StyledPreloader({ children, bgColor, color }) {
+
+function StyledPreloader({
+  children, bgColor, color, time,
+}) {
   const [loading, setLoading] = useState(true);
+  const childrenWithProp = React.Children.map(children, child => React.cloneElement(child, {
+    color,
+  }));
   const bodyScroll = () => {
     document.body.style.overflow = loading ? 'hidden' : null;
     document.body.style.height = loading ? '100%' : null;
     document.body.style.width = loading ? '100%' : null;
     document.body.style.position = loading ? 'fixed' : null;
   };
+
   bodyScroll();
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        setTimeout(() => {
+          setLoading(false);
+        }, time);
+      }
+    };
   }, []);
-  useEffect(() => {});
-  const childrenWithProp = React.Children.map(children, child => React.cloneElement(child, {
-    color,
-  }));
+
   return (
-    <Preloader bgColor={bgColor} loading={loading} id="preloader">
+    <Preloader bgColor={bgColor} loadingStatus={loading} id="preloader">
       {childrenWithProp}
     </Preloader>
   );

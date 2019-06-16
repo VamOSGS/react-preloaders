@@ -35,7 +35,6 @@ body {
   position: relative;
   border-radius: 50%;
   border-top-color: #3acfd5;
-  -webkit-animation: r1 0.6s cubic-bezier(0.44, 0.39, 0.32, 1.28) infinite;
   animation: r1 0.6s cubic-bezier(0.44, 0.39, 0.32, 1.28) infinite;
 }
 .preloader::after,
@@ -47,64 +46,38 @@ body {
   border-radius: 50%;
 }
 .preloader::before {
-  -webkit-animation: r2 1s linear infinite;
   animation: r2 1s linear infinite;
   top: 20px;
   bottom: 20px;
   left: 20px;
   right: 20px;
   border-top-color: inherit;
-  -webkit-filter: brightness(150%);
   filter: brightness(150%);
 }
 .preloader::after {
-  -webkit-animation: r2 2s linear infinite;
   animation: r2 2s linear infinite;
   top: 43px;
   bottom: 43px;
   left: 43px;
   right: 43px;
-  -webkit-filter: brightness(180%);
   filter: brightness(180%);
   border-top-color: inherit;
 }
-@-webkit-keyframes r1 {
-  from {
-    -webkit-transform: rotate(0deg) scale(0.4, 0.4);
-    transform: rotate(0deg) scale(0.4, 0.4);
-  }
-  to {
-    -webkit-transform: rotate(360deg) scale(0.4, 0.4);
-    transform: rotate(360deg) scale(0.4, 0.4);
-  }
-}
+
 @keyframes r1 {
   from {
-    -webkit-transform: rotate(0deg) scale(0.4, 0.4);
     transform: rotate(0deg) scale(0.4, 0.4);
   }
   to {
-    -webkit-transform: rotate(360deg) scale(0.4, 0.4);
     transform: rotate(360deg) scale(0.4, 0.4);
   }
 }
-@-webkit-keyframes r2 {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
-  }
-}
+
 @keyframes r2 {
   from {
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(-360deg);
     transform: rotate(-360deg);
   }
 }
