@@ -1,6 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { withPreloader } from '../Preloader';
+import CircleStyles from './CircleStyles';
 
 const Circle = ({ className, color }) => (
   <svg className={className} height="50" width="50">
@@ -21,4 +23,8 @@ Circle.propTypes = {
   color: PropTypes.string,
 };
 
-export default withPreloader(Circle);
+const StyledCircle = styled(Circle)`
+  ${CircleStyles}
+`;
+
+export default withPreloader(StyledCircle);

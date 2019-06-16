@@ -1,10 +1,10 @@
-import Circle from './Circle/StyledCircle';
-import Zoom from './Zoom/StyledZoom';
-import Dots from './Dots/StyledDots';
-import Lines from './Lines/StyledLines';
-import Circle2 from './Circle2/StyledCircle2';
-import Cube from './Cube/StyledCube';
+import Circle from './Circle/Circle';
+import Zoom from './Zoom/Zoom';
+import Lines from './Lines/Lines';
+import Circle2 from './Circle2/Circle2';
+import Cube from './Cube/Cube';
 import CustomPreloader from './Preloader';
+import Dots from './Dots/Dots';
 
 export {
   Circle, Zoom, Dots, Lines, Circle2, Cube, CustomPreloader,

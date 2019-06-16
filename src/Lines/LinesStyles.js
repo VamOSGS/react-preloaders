@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import Lines from './Lines';
+import { keyframes, css } from 'styled-components';
 
 const sequence1 = keyframes`
 0% {
@@ -24,7 +23,7 @@ const sequence2 = keyframes`
   height: 20px;
 }
 `;
-const StyledLines = styled(Lines)`
+const LinesStyles = css`
   position: fixed;
   margin: auto;
   left: 0;
@@ -42,7 +41,7 @@ const StyledLines = styled(Lines)`
       position: absolute;
       width: 2px;
       height: 0;
-      background-color: #000;
+      background: ${props => props.color};
       bottom: 0;
       &:nth-child(1) {
         left: 0;
@@ -72,4 +71,4 @@ const StyledLines = styled(Lines)`
   }
 `;
 
-export default StyledLines;
+export default LinesStyles;

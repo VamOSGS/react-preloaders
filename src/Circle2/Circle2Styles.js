@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import Circle2 from './Circle2';
+import { keyframes, css } from 'styled-components';
 
 const rotate1 = keyframes`
 from {
@@ -17,12 +16,13 @@ const rotate2 = keyframes`
     transform: rotate(-360deg);
   }
 `;
-const StyledCircle2 = styled(Circle2)`
+const Circle2Styles = css`
   width: 200px;
   height: 200px;
   position: relative;
   border: 3px solid transparent;
   border-radius: 50%;
+  border-top-color: ${props => props.color};
   animation: ${rotate1} 0.6s cubic-bezier(0.44, 0.39, 0.32, 1.28) infinite;
   &:after,
   :before {
@@ -52,4 +52,4 @@ const StyledCircle2 = styled(Circle2)`
   }
 `;
 
-export default StyledCircle2;
+export default Circle2Styles;

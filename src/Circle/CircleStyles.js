@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import Circle from './Circle';
+import { keyframes, css } from 'styled-components';
 
 const rotate = keyframes`
   0% {
@@ -24,7 +23,7 @@ const dash = keyframes`
   }
 `;
 
-const StyledCircle = styled(Circle)`
+const CircleStyles = css`
   animation: ${rotate} 2s linear infinite;
   height: 50px;
   left: 50%;
@@ -42,4 +41,4 @@ const StyledCircle = styled(Circle)`
   }
 `;
 
-export default StyledCircle;
+export default CircleStyles;

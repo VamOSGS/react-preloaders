@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import Dots from './Dots';
+import { keyframes, css } from 'styled-components';
 
 const sdelay = keyframes`
   0%,
@@ -14,12 +13,12 @@ const sdelay = keyframes`
   }
 `;
 
-const StyledDots = styled(Dots)`
+const DotsStyles = css`
   height: 30px;
   text-align: center;
   font-size: 10px;
   > div {
-    background-color: #72c2a1;
+    background: ${props => props.color};
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -41,4 +40,4 @@ const StyledDots = styled(Dots)`
   }
 `;
 
-export default StyledDots;
+export default DotsStyles;

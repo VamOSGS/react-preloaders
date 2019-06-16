@@ -1,18 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { withPreloader } from '../Preloader';
+import DotsStyles from './DotsStyles';
 
-const Dots = ({ className, color }) => (
+const items = new Array(4).fill('');
+const Dots = ({ className }) => (
   <div className={className}>
-    <div style={{ backgroundColor: color }} className="circ1" />
-    <div style={{ backgroundColor: color }} className="circ2" />
-    <div style={{ backgroundColor: color }} className="circ3" />
-    <div style={{ backgroundColor: color }} className="circ4" />
+    {items.map((i, key) => (
+      <div key={key.toString()} className={`circ${key + 1}`} />
+    ))}
   </div>
 );
 Dots.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.string,
 };
 
-export default withPreloader(Dots);
+const StyledDots = styled(Dots)`
+  ${DotsStyles}
+`;
+
+export default withPreloader(StyledDots);

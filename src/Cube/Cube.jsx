@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { withPreloader } from '../Preloader';
+import CubeStyles from './CubeStyles';
 
-const Cube = ({ className, color }) => (
-  <div style={{ borderColor: color }} className={className}>
-    <span style={{ backgroundColor: color }} className="loader-inner" />
+const Cube = ({ className }) => (
+  <div className={className}>
+    <span />
   </div>
 );
 Cube.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.string,
 };
 
-export default withPreloader(Cube);
+const StyledCube = styled(Cube)`
+  ${CubeStyles}
+`;
+
+export default withPreloader(StyledCube);

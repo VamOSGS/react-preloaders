@@ -1,19 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { withPreloader } from '../Preloader';
+import ZoomStyles from './ZoomStyles';
 
-const Zoom = ({ className, color }) => (
+const items = new Array(5).fill('');
+const Zoom = ({ className }) => (
   <div className={className}>
-    <div style={{ backgroundColor: color }} className="rect1" />
-    <div style={{ backgroundColor: color }} className="rect2" />
-    <div style={{ backgroundColor: color }} className="rect3" />
-    <div style={{ backgroundColor: color }} className="rect4" />
-    <div style={{ backgroundColor: color }} className="rect5" />
+    {items.map((i, key) => (
+      <div key={key.toString()} className={`rect${key + 1}`} />
+    ))}
   </div>
 );
 Zoom.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.string,
 };
 
-export default withPreloader(Zoom);
+const StyledZoom = styled(Zoom)`
+  ${ZoomStyles}
+`;
+export default withPreloader(StyledZoom);

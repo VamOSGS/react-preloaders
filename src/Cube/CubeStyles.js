@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import Cube from './Cube';
+import { keyframes, css } from 'styled-components';
 
 const loader = keyframes` {
   0% {
@@ -43,19 +42,19 @@ const loaderInner = keyframes`  {
 }
 `;
 
-const StyledCube = styled(Cube)`
+const CubeStyles = css`
   display: inline-block;
   width: 30px;
   height: 30px;
-  border: 4px solid #fff;
+  border: 4px solid ${props => props.color};
   animation: ${loader} 2s infinite ease;
-  .loader-inner {
+  span {
     vertical-align: top;
     display: inline-block;
     width: 100%;
-    background-color: #fff;
+    background-color: ${props => props.color};
     animation: ${loaderInner} 2s infinite ease-in;
   }
 `;
 
-export default StyledCube;
+export default CubeStyles;

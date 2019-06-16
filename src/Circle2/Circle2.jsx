@@ -1,13 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { withPreloader } from '../Preloader';
+import Circle2Styles from './Circle2Styles';
 
-const Circle2 = ({ className, color }) => (
-  <div style={{ borderTopColor: color }} className={className} />
-);
+const Circle2 = ({ className }) => <div className={className} />;
+
 Circle2.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.string,
 };
 
-export default withPreloader(Circle2);
+const StyledCircle2 = styled(Circle2)`
+  ${Circle2Styles}
+`;
+
+export default withPreloader(StyledCircle2);

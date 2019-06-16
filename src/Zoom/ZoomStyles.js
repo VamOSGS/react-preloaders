@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import Zoom from './Zoom';
+import { keyframes, css } from 'styled-components';
 
 const sdelay = keyframes`
 0%,
@@ -12,7 +11,7 @@ const sdelay = keyframes`
 }
 `;
 
-const StyledZoom = styled(Zoom)`
+const ZoomStyles = css`
   margin: 100px auto;
   width: 50px;
   height: 60px;
@@ -23,6 +22,7 @@ const StyledZoom = styled(Zoom)`
     width: 6px;
     display: inline-block;
     margin: 2px;
+    background: ${props => props.color};
     animation: ${sdelay} 1.2s infinite ease-in-out;
   }
   .rect2 {
@@ -39,4 +39,4 @@ const StyledZoom = styled(Zoom)`
   }
 `;
 
-export default StyledZoom;
+export default ZoomStyles;
