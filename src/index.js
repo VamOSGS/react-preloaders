@@ -4,7 +4,8 @@ import Dots from './Dots/StyledDots';
 import Lines from './Lines/StyledLines';
 import Circle2 from './Circle2/StyledCircle2';
 import Cube from './Cube/StyledCube';
+import CustomPreloader from './StyledPreloader';
 
 export {
-  Circle, Zoom, Dots, Lines, Circle2, Cube,
+  Circle, Zoom, Dots, Lines, Circle2, Cube, CustomPreloader,
 };

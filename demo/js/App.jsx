@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { Zoom } from 'react-preloaders';
+import { Cube } from 'react-preloaders';
 import Header from './Header';
 import Footer from './Footer';
 import List from './List';
@@ -13,7 +13,7 @@ const App = () => (
       <List />
       <Footer />
     </div>
-    <Zoom />
+    <Cube />
   </div>
 );
 
