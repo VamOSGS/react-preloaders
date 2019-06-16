@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - 10.16.0 
+  - 10.16.0
 
 cache:
   directories:
-    - "node_modules"
+    - 'node_modules'
 
-script: 
+script:
   - yarn test

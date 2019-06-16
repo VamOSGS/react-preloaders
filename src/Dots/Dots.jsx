@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledPreloader from '../StyledPreloader';
+import { withPreloader } from '../Preloader';
 
 const Dots = ({ className, color }) => (
   <div className={className}>
@@ -15,13 +15,4 @@ Dots.propTypes = {
   color: PropTypes.string,
 };
 
-const DotsWithPreloader = ({ className }) => (
-  <StyledPreloader>
-    <Dots className={className} />
-  </StyledPreloader>
-);
-DotsWithPreloader.propTypes = {
-  className: PropTypes.string,
-};
-
-export default DotsWithPreloader;
+export default withPreloader(Dots);

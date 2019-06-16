@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledPreloader from '../StyledPreloader';
+import { withPreloader } from '../Preloader';
 
 const Zoom = ({ className, color }) => (
   <div className={className}>
@@ -15,14 +15,5 @@ Zoom.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
 };
-const ZoomWithPreloader = ({ className }) => (
-  <StyledPreloader>
-    <Zoom className={className} />
-  </StyledPreloader>
-);
 
-ZoomWithPreloader.propTypes = {
-  className: PropTypes.string,
-};
-
-export default ZoomWithPreloader;
+export default withPreloader(Zoom);

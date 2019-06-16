@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import StyledPreloader from '../StyledPreloader';
+import { withPreloader } from '../Preloader';
 
 const Cube = ({ className, color }) => (
   <div style={{ borderColor: color }} className={className}>
@@ -12,15 +12,4 @@ Cube.propTypes = {
   color: PropTypes.string,
 };
 
-const CubeWithPreloader = ({
-  className, color, bgColor, time, customLoading,
-}) => (
-  <StyledPreloader color={color} bgColor={bgColor} time={time} customLoading={customLoading}>
-    <Cube className={className} />
-  </StyledPreloader>
-);
-CubeWithPreloader.propTypes = {
-  className: PropTypes.string,
-};
-
-export default CubeWithPreloader;
+export default withPreloader(Cube);
