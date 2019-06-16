@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import StyledPreloader from '../StyledPreloader';
-import Circle from '../Circle/StyledCircle';
+import StyledPreloader from '../Preloader';
+import Circle from '../Circle/Circle';
 import 'jest-styled-components';
 
 describe('StyledPreloader', () => {
