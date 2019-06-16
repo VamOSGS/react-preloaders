@@ -3,6 +3,10 @@
 [![NPM version](https://badge.fury.io/js/react-preloaders.svg)](http://badge.fury.io/js/react-preloaders)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
+### [react-preloaders v3](https://github.com/VamOSGS/react-preloaders/issues/9#issue-456633371) is coming... 
+
+
+
 it's fastest way to add nice preloader to your application.
 
 #### [vamosgs.github.io/react-preloaders](https://vamosgs.github.io/react-preloaders/)
