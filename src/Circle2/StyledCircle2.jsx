@@ -24,8 +24,6 @@ const StyledCircle2 = styled(Circle2)`
   border: 3px solid transparent;
   border-radius: 50%;
   animation: ${rotate1} 0.6s cubic-bezier(0.44, 0.39, 0.32, 1.28) infinite;
-  border-top-color: ${props => props.color};
-  ${props => console.log(props)}
   &:after,
   :before {
     content: '';

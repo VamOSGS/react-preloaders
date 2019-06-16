@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import StyledPreloader from '../StyledPreloader';
 
 const Lines = ({ className, color }) => (
@@ -13,11 +14,17 @@ const Lines = ({ className, color }) => (
     </ul>
   </div>
 );
+Lines.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+};
 
 const LinesWithPreloader = ({ className }) => (
   <StyledPreloader>
     <Lines className={className} />
   </StyledPreloader>
 );
-
+LinesWithPreloader.propTypes = {
+  className: PropTypes.string,
+};
 export default LinesWithPreloader;

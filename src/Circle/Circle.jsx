@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import StyledPreloader from '../StyledPreloader';
 
 const Circle = ({ className, color }) => (
@@ -15,10 +16,18 @@ const Circle = ({ className, color }) => (
     />
   </svg>
 );
+Circle.propTypes = {
+  className: PropTypes.string,
+  color: PropTypes.string,
+};
+
 const CircleWithPreloader = ({ className }) => (
   <StyledPreloader>
     <Circle className={className} />
   </StyledPreloader>
 );
+CircleWithPreloader.propTypes = {
+  className: PropTypes.string,
+};
 
 export default CircleWithPreloader;

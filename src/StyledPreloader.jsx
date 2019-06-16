@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Preloader = styled.div`
@@ -48,6 +49,13 @@ function StyledPreloader({
     </Preloader>
   );
 }
+
+StyledPreloader.propTypes = {
+  time: PropTypes.number,
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  children: PropTypes.element,
+};
 
 StyledPreloader.defaultProps = { time: 1300, bgColor: '#f7f7f7', color: '#2D2D2D' };
 
