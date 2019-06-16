@@ -1,8 +1,10 @@
 ## React Preloaders
 
-[![NPM version](https://badge.fury.io/js/react-preloaders.svg)](http://badge.fury.io/js/react-preloaders)
-[![Build Status](https://travis-ci.org/VamOSGS/react-preloaders.svg?branch=development)](https://travis-ci.org/VamOSGS/react-preloaders)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+![npm](https://img.shields.io/npm/v/react-preloaders.svg?style=flat-square)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-preloaders.svg?style=flat-square)
+![Travis (.org) branch](https://img.shields.io/travis/vamosgs/react-preloaders/development.svg?style=flat-square)
+[![npm downloads](https://img.shields.io/npm/dm/react-preloaders.svg?style=flat-square)](https://www.npmjs.org/package/react-preloaders)
+![NPM](https://img.shields.io/npm/l/react-preloaders.svg?style=flat-square)
 
 it's fastest way to add nice preloader to your application.
 

@@ -34,15 +34,21 @@ function StyledPreloader({
 
   bodyScroll();
   useEffect(() => {
-    document.onreadystatechange = () => {
-      if (document.readyState === 'complete') {
-        setTimeout(() => {
-          setLoading(false);
-        }, time);
-      }
-    };
-  }, [null]);
-  console.log(customLoading);
+    if (customLoading === false) {
+      setTimeout(() => {
+        setLoading(false);
+      }, time);
+    }
+    if (customLoading === undefined) {
+      document.onreadystatechange = () => {
+        if (document.readyState === 'complete') {
+          setTimeout(() => {
+            setLoading(false);
+          }, time);
+        }
+      };
+    }
+  }, [customLoading]);
   return (
     <Preloader bgColor={bgColor} loadingStatus={loading} id="preloader">
       {childrenWithProp}
@@ -58,6 +64,10 @@ StyledPreloader.propTypes = {
   customLoading: PropTypes.bool,
 };
 
-StyledPreloader.defaultProps = { time: 1300, bgColor: '#f7f7f7', color: '#2D2D2D' };
+StyledPreloader.defaultProps = {
+  time: 1300,
+  bgColor: '#f7f7f7',
+  color: '#2D2D2D',
+};
 
 export default StyledPreloader;

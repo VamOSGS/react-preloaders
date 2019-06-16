@@ -12,8 +12,10 @@ Cube.propTypes = {
   color: PropTypes.string,
 };
 
-const CubeWithPreloader = ({ className }) => (
-  <StyledPreloader>
+const CubeWithPreloader = ({
+  className, color, bgColor, time, customLoading,
+}) => (
+  <StyledPreloader color={color} bgColor={bgColor} time={time} customLoading={customLoading}>
     <Cube className={className} />
   </StyledPreloader>
 );
