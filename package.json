@@ -3,7 +3,7 @@
   "version": "2.1.4",
   "description": "🌌Package for adding preloaders to your React apps",
   "main": "./lib/index.js",
-  "author": "Gegham Samvelyan",
+  "author": "Gegham Samvelyan (VamOSGS)",
   "license": "MIT",
   "scripts": {
     "deploy": "cd ./demo && yarn deploy",
