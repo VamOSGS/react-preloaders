@@ -1,6 +1,6 @@
 ## React Preloaders
 
-![React Preloaders](/assets/react-preloaders.png)
+![React Preloaders](/assets/react-preloaders-logo.png)
 
 ![npm](https://img.shields.io/npm/v/react-preloaders.svg?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-preloaders.svg?style=flat-square)
