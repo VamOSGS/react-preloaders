@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { Cube } from 'react-preloaders';
+import { Dots } from 'react-preloaders';
 import Header from './Header';
 import Footer from './Footer';
 import List from './List';
@@ -13,7 +13,8 @@ const App = () => (
       <List />
       <Footer />
     </div>
-    <Cube color="white" background="linear-gradient(180deg, #f95759 0%, #a62022 100%)" />
+    <Dots background="blur" />
+    {/* <Dots color="white" background="linear-gradient(180deg, #f95759 0%, #a62022 100%)" /> */}
   </div>
 );
 

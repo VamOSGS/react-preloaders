@@ -24,7 +24,6 @@ const sequence2 = keyframes`
 }
 `;
 const LinesStyles = css`
-  position: fixed;
   margin: auto;
   left: 0;
   right: 0;

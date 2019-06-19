@@ -27,6 +27,12 @@ function Preloader({
       direction: animate && animate[1],
     };
   };
+  const detectBg = () => {
+    if (background === 'blur') {
+      return 'rgba(94, 85, 85, 0.32941176470588235)';
+    }
+    return background;
+  };
 
   bodyScroll();
   useEffect(() => {
@@ -45,10 +51,22 @@ function Preloader({
       };
     }
   }, [customLoading]);
+  useEffect(() => {
+    if (background === 'blur') {
+      const nodes = Object.values(
+        document.getElementById('preloader').parentNode.childNodes,
+      ).filter(i => i.id !== 'preloader');
+      nodes.forEach((el) => {
+        // eslint-disable-next-line no-param-reassign
+        el.style.filter = loading ? 'blur(5px)' : 'blur(0px)';
+      });
+    }
+  }, [loading]);
+
   return (
     <StyledPreloader
       animation={generateAnimation()}
-      background={background}
+      background={detectBg()}
       loadingStatus={loading}
       id="preloader"
     >
