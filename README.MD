@@ -8,8 +8,6 @@
 [![npm downloads](https://img.shields.io/npm/dm/react-preloaders.svg?style=flat-square)](https://www.npmjs.org/package/react-preloaders)
 ![NPM](https://img.shields.io/npm/l/react-preloaders.svg?style=flat-square)
 
-it's fastest way to add nice preloader to your application.
-
 #### [vamosgs.github.io/react-preloaders](https://vamosgs.github.io/react-preloaders/)
 
 ### Setup
@@ -30,24 +28,177 @@ yarn add react-preloaders --save
 
 #### find full preloaders list [here](https://vamosgs.github.io/react-preloaders/).
 
+### Simplest way
+
 ```jsx
 import React from 'react';
 import { Lines } from 'react-preloaders';
 
-class App extends Component {
+function App() {
+  return (
+    <React.Fragment>
+      <YourApp />
+      <Lines />
+    </React.Fragment>
+  );
+}
+```
+
+### Properties (Props)
+
+<table>
+  <tr>
+    <th>Props</th>
+    <th>color</th>
+    <th>background</th>
+    <th>time</th>
+    <th>animation</th>
+    <th>customLoading</th>
+  </tr>
+  <tr>
+    <th>type</th>
+    <td>String(hex, rgb,...)</td>
+    <td>String(blur, gradient ...)</td>
+    <td>Number(Milliseconds)</td>
+    <td>String(fade, slide...)</td>
+    <td>Boolean</td>
+  </tr>
+  <tr>
+    <th>Default Value</th>
+    <td>#2D2D2D</td>
+    <td>#F7F7F7</td>
+    <td>1300ms</td>
+    <td>fade</td>
+    <td>undefined</td>
+  </tr>
+</table>
+
+## color (String)
+
+Color (hex, rgb, rgba) defines preloaders main color.
+
+```jsx
+import { Lines } from 'react-preloaders';
+
+<Lines color={'#f7f7f7'} />;
+<Lines color={'rgb(158, 38, 102)'} />;
+```
+
+## background (String)
+
+Background can be just color (hex, rgb), gradient or blured.
+For just colored background pass color(hex, rgb, rgba).
+
+```jsx
+import { Lines } from 'react-preloaders';
+
+<Lines background="#f7f7f7" />;
+```
+
+For gradient background pass your gradient.
+
+You can generate gradients [here](https://cssgradient.io/).
+
+```jsx
+import { Lines } from 'react-preloaders';
+
+<Lines background="linear-gradient(180deg, #f95759 0%, #a62022 100%)" />;
+```
+
+For blured background just pass blur.(it's now in beta)
+
+```jsx
+import { Lines } from 'react-preloaders';
+
+<Lines background="blur" />;
+```
+
+## time (Number)
+
+Time defines how long you want show preloader after page loaded.
+
+```jsx
+import { Lines } from 'react-preloaders';
+
+<Lines time={1800} />;
+```
+
+## animation (String)
+
+Now you can choose preloader closing animation, in this version available just 2 animations <b>fade</b> and <b>slide</b>.
+By default preloader will close with <b>fade</b> animation.
+
+#### For <b>slide</b> animation you can choose direction.
+
+```jsx
+import { Lines } from 'react-preloaders';
+
+<Lines animation="slide" />;
+<Lines animation="slide-down" />;
+<Lines animation="slide-right" />;
+<Lines animation="slide-left" />;
+```
+
+## customLoading (Boolean)
+
+If in your app somthing loads async you can use preloader's too. For <b>customLoading</b> you need to pass your loading status.
+
+
+```jsx
+import React, { Component } from 'react';
+import { Lines } from 'react-preloaders';
+
+class App {
+  constructor() {
+    state = {
+      loading: true
+    };
+  }
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => {
+        setState({ loading: false });
+      })
+      .catch(err => {
+        setState({ loading: false });
+      });
+  }
   render() {
     return (
       <React.Fragment>
-        <Lines
-          color={'#f7f7f7'} //Default #2D2D2D
-          bgColor={'#222'} //Default #F7F7F7
-          time={1400} //Default #1300
-        />
-
         <YourApp />
+        <Lines customLoading={loading} />
       </React.Fragment>
     );
   }
+}
+```
+###  Example with hooks
+```jsx
+import React, { useState, useEffect } from 'react';
+import { Lines } from 'react-preloaders';
+
+function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => {
+        setLoading(false);
+      })
+      .catch(err => {
+        setLoading(false);
+      });
+  }, []);
+
+  return (
+    <React.Fragment>
+      <YourApp />
+      <Lines customLoading={loading} />
+    </React.Fragment>
+  );
 }
 ```
 
@@ -134,26 +285,3 @@ module.exports = {
   }
 };
 ```
-
-### Properties (Props)
-
-<table>
-  <tr>
-    <th>Props -> </th>
-    <th>Color</th>
-    <th>bgColor</th>
-    <th>Time</th>
-  </tr>
-  <tr>
-    <th>type</th>
-    <td>String(rgb, hex ...)</td>
-    <td>String(rgb, hex ...)</td>
-    <td>Number(Milliseconds)</td>
-  </tr>
-  <tr>
-    <th>Default Value</th>
-    <td>#2D2D2D</td>
-    <td>#F7F7F7</td>
-    <td>1300ms</td>
-  </tr>
-</table>
