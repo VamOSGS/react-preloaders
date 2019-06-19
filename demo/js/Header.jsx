@@ -6,7 +6,7 @@ import { npm } from 'react-icons-kit/icomoon/npm';
 const Header = () => (
   <div className="code">
     <div>
-      Find this package in
+      Download this package from 
       <a href="https://www.npmjs.com/package/react-preloaders">
         <Icon icon={npm} />PM
       </a>

@@ -2,7 +2,13 @@
 
 exports[`StyledPreloader renders correctly 1`] = `
 <styled.div
-  bgColor="#f7f7f7"
+  animation={
+    Object {
+      "direction": undefined,
+      "name": "fade",
+    }
+  }
+  background="#f7f7f7"
   id="preloader"
   loadingStatus={true}
 >

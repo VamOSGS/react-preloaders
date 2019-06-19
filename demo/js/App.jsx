@@ -13,7 +13,7 @@ const App = () => (
       <List />
       <Footer />
     </div>
-    <Cube />
+    <Cube color="white" background="linear-gradient(180deg, #f95759 0%, #a62022 100%)" />
   </div>
 );
 

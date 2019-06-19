@@ -1,25 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import PreloaderStyles from './PreloaderStyles';
 
-const Preloader = styled.div`
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  transition: opacity 0.3s linear, visibility 0.2s linear 0.3s;
-  background: ${props => props.bgColor};
-  opacity: ${props => (props.loadingStatus ? 1 : 0)};
-  visibility: ${props => (props.loadingStatus ? 'visible' : 'hidden')};
+const StyledPreloader = styled.div`
+  ${PreloaderStyles}
 `;
 
-function StyledPreloader({
-  children, bgColor, color, time, customLoading,
+function Preloader({
+  children, background, color, time, customLoading, animation,
 }) {
   const [loading, setLoading] = useState(true);
   const childrenWithProp = React.Children.map(children, child => React.cloneElement(child, {
@@ -30,6 +19,13 @@ function StyledPreloader({
     document.body.style.height = loading ? '100%' : null;
     document.body.style.width = loading ? '100%' : null;
     document.body.style.position = loading ? 'fixed' : null;
+  };
+  const generateAnimation = () => {
+    const animate = animation && animation.split('-');
+    return {
+      name: animate && animate[0],
+      direction: animate && animate[1],
+    };
   };
 
   bodyScroll();
@@ -50,24 +46,31 @@ function StyledPreloader({
     }
   }, [customLoading]);
   return (
-    <Preloader bgColor={bgColor} loadingStatus={loading} id="preloader">
+    <StyledPreloader
+      animation={generateAnimation()}
+      background={background}
+      loadingStatus={loading}
+      id="preloader"
+    >
       {childrenWithProp}
-    </Preloader>
+    </StyledPreloader>
   );
 }
 
-StyledPreloader.propTypes = {
+Preloader.propTypes = {
   time: PropTypes.number,
-  bgColor: PropTypes.string,
+  background: PropTypes.string,
   color: PropTypes.string,
+  animation: PropTypes.string,
   children: PropTypes.element,
   customLoading: PropTypes.bool,
 };
 
-StyledPreloader.defaultProps = {
+Preloader.defaultProps = {
   time: 1300,
-  bgColor: '#f7f7f7',
+  background: '#f7f7f7',
   color: '#2D2D2D',
+  animation: 'fade',
 };
 
-export default StyledPreloader;
+export default Preloader;
