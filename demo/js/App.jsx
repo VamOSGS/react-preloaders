@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { Lines } from 'react-preloaders';
+import { Sugar } from 'react-preloaders';
 import Header from './Header';
 import Footer from './Footer';
 import List from './List';
@@ -13,9 +13,8 @@ const App = () => (
       <List />
       <Footer />
     </div>
-    <Lines
-      animation="slide"
-      color="white"
+    <Sugar
+      color="#ffffff"
       background="linear-gradient(180deg, #f95759 0%, #a62022 100%)"
     />
   </div>

@@ -5,7 +5,10 @@ import Circle2 from './Circle2/Circle2';
 import Cube from './Cube/Cube';
 import CustomPreloader from './Preloader';
 import Dots from './Dots/Dots';
+import Ripple from './Ripple/Ripple';
+import Planets from './Planets/Planets';
+import Sugar from './Sugar/Sugar';
 
 export {
-  Circle, Zoom, Dots, Lines, Circle2, Cube, CustomPreloader,
+  Circle, Zoom, Sugar, Planets, Ripple, Dots, Lines, Circle2, Cube, CustomPreloader,
 };
