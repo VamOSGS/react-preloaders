@@ -1,6 +1,6 @@
 ## React Preloaders
 
-![React Preloaders](/assets/react-preloaders-card.jpg)
+![React Preloaders](https://raw.githubusercontent.com/VamOSGS/react-preloaders/development/assets/react-preloaders-card.jpg)
 
 ![npm](https://img.shields.io/npm/v/react-preloaders.svg?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-preloaders.svg?style=flat-square)
@@ -123,6 +123,14 @@ import { Lines } from 'react-preloaders';
 <Lines time={1800} />;
 ```
 
+### If your are using [customLoading](#customLoading) and you don't want play preloader if your loading status false you need to pass time 0
+
+```jsx
+import { Lines } from 'react-preloaders';
+
+<Lines customLoading={loading} time={0} />;
+```
+
 ## animation (String)
 
 Now you can choose preloader closing animation, in this version available just 2 animations <b>fade</b> and <b>slide</b>.
@@ -141,8 +149,7 @@ import { Lines } from 'react-preloaders';
 
 ## customLoading (Boolean)
 
-If in your app somthing loads async you can use preloader's too. For <b>customLoading</b> you need to pass your loading status.
-
+If in your app somthing loads async you can use preloaders too. For <b>customLoading</b> you need to pass your loading status.
 
 ```jsx
 import React, { Component } from 'react';
@@ -174,7 +181,9 @@ class App {
   }
 }
 ```
-###  Example with hooks
+
+### Example with hooks
+
 ```jsx
 import React, { useState, useEffect } from 'react';
 import { Lines } from 'react-preloaders';
