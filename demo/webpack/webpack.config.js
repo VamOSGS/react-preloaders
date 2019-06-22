@@ -24,6 +24,9 @@ const common = {
   resolve: {
     modules: ['node_modules', PATHS.SRC],
     extensions: ['.js', '.jsx', '.json', '.less'],
+    alias: {
+      react: path.resolve('./node_modules/react'),
+    },
   },
   plugins: [new CleanWebpackPlugin(pathsToClean, cleanOptions)],
   optimization: {

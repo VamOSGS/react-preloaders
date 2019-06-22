@@ -1,8 +1,9 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React, { Component } from 'react';
+import { Circle, Zoom, Cube, Circle2, Lines, Dots, Ripple, Planets, Sugar } from 'react-preloaders';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { iosCopyOutline } from 'react-icons-kit/ionicons/iosCopyOutline';
 import Icon from 'react-icons-kit';
-import { Circle, Zoom, Cube, Circle2, Lines, Dots } from '../../lib';
 
 const preloaders = [
   { label: 'Dots', render: <Dots /> },
@@ -11,6 +12,9 @@ const preloaders = [
   { label: 'Cube', render: <Cube /> },
   { label: 'Circle2', render: <Circle2 /> },
   { label: 'Lines', render: <Lines /> },
+  { label: 'Ripple', render: <Ripple /> },
+  { label: 'Planets', render: <Planets /> },
+  { label: 'Sugar', render: <Sugar /> },
 ];
 export default class List extends Component {
   render() {

@@ -12,7 +12,7 @@ body {
       padding: 20px;
     }
     .flex {
-      width: 50vw;
+      width: 67vw;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -30,6 +30,9 @@ body {
           color: #f95759;
           transition: 0.35s;
           margin: 0 5px;
+          font-weight: bold;
+          font-size: 17px;
+          text-decoration: none;
           &:hover {
             color: #c34d4f;
           }
@@ -111,14 +114,33 @@ body {
             #preloader {
               position: unset;
               width: 100%;
-              height: 200px;
+              height: 12vw;
               margin: auto;
-              #loader {
+              opacity: 1;
+              visibility: visible;
+              > div {
                 position: unset;
               }
-              &.close {
-                opacity: 1;
-                visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1720px) {
+  body {
+    .wrap {
+      .flex {
+        width: 74vw;
+        .list {
+          > ul {
+            > li {
+              .info {
+                div {
+                  margin-left: 0;
+                  margin-right: 8px;
+                }
               }
             }
           }
@@ -131,11 +153,19 @@ body {
   body {
     .wrap {
       .flex {
-        width: 80vw;
+        width: 90vw;
         .list {
           > ul {
             > li {
-              width: 30vw;
+              width: 25vw;
+              .info {
+                p {
+                  font-size: 13px;
+                }
+              }
+              #preloader {
+                height: 125px;
+              }
             }
           }
         }
@@ -151,9 +181,34 @@ body {
         .list {
           > ul {
             > li {
-              min-width: 80%;
+              min-width: 38%;
+              #preloader {
+                height: 200px;
+              }
               .info {
                 flex-direction: column-reverse;
+                div {
+                  margin: 10px 0 0 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 620px) {
+  body {
+    .wrap {
+      .flex {
+        width: 90vw;
+        .list {
+          > ul {
+            > li {
+              min-width: 80%;
+              #preloader {
+                height: 60vw;
               }
             }
           }

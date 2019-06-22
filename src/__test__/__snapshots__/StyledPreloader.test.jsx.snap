@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StyledPreloader renders correctly 1`] = `
+<styled.div
+  animation={
+    Object {
+      "direction": undefined,
+      "name": "fade",
+    }
+  }
+  background="#f7f7f7"
+  id="preloader"
+  loadingStatus={true}
+>
+  <Component
+    color="#2D2D2D"
+    key=".0"
+  />
+</styled.div>
+`;

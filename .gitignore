@@ -6,3 +6,5 @@ demo/node_modules
 demo/dist
 demo/.env
 build
+examples/*/node_modules
+lib
