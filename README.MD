@@ -53,27 +53,27 @@ function App() {
     <th>Default value</th>
   </tr>
   <tr>
-    <th>color</th>
+    <th><a href="#color-string">color</a></th>
     <td>String(hex, rgb,...)</td>
     <td>#2D2D2D</td>
   </tr>
   <tr>
-    <th>background</th>
+    <th><a href="#background-string">background</a></th>
     <td>String(blur, gradient...)</td>
     <td>#F7F7F7</td>
   </tr>
    <tr>
-    <th>time</th>
+    <th><a href="#time-number">time</a></th>
     <td>Number(Milliseconds)</td>
     <td>1300ms</td>
   </tr>
    <tr>
-    <th>animation</th>
+    <th><a href="#animation-string">animation</a></th>
     <td>String(fade, slide...)</td>
     <td>fade</td>
   </tr>
   <tr>
-    <th>customLoading</th>
+    <th><a href="#customloading-boolean">customLoading</a></th>
     <td>Boolean</td>
     <td>undefined</td>
   </tr>
