@@ -1,6 +1,6 @@
 {
   "name": "react-preloaders",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "description": "🌌Package for adding preloaders to your React apps",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
