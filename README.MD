@@ -7,7 +7,6 @@
 ![Travis (.org) branch](https://img.shields.io/travis/vamosgs/react-preloaders/development.svg?style=flat-square)
 [![npm downloads](https://img.shields.io/npm/dm/react-preloaders.svg?style=flat-square)](https://www.npmjs.org/package/react-preloaders)
 ![NPM](https://img.shields.io/npm/l/react-preloaders.svg?style=flat-square)
-
 #### [vamosgs.github.io/react-preloaders](https://vamosgs.github.io/react-preloaders/)
 
 ### Setup
