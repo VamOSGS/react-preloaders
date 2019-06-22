@@ -48,27 +48,33 @@ function App() {
 
 <table>
   <tr>
-    <th>Props</th>
-    <th>color</th>
-    <th>background</th>
-    <th>time</th>
-    <th>animation</th>
-    <th>customLoading</th>
-  </tr>
-  <tr>
+    <th>Prop</th>
     <th>type</th>
-    <td>String(hex, rgb,...)</td>
-    <td>String(blur, gradient ...)</td>
-    <td>Number(Milliseconds)</td>
-    <td>String(fade, slide...)</td>
-    <td>Boolean</td>
+    <th>Default value</th>
   </tr>
   <tr>
-    <th>Default Value</th>
+    <th>color</th>
+    <td>String(hex, rgb,...)</td>
     <td>#2D2D2D</td>
+  </tr>
+  <tr>
+    <th>background</th>
+    <td>String(blur, gradient...)</td>
     <td>#F7F7F7</td>
+  </tr>
+   <tr>
+    <th>time</th>
+    <td>Number(Milliseconds)</td>
     <td>1300ms</td>
+  </tr>
+   <tr>
+    <th>animation</th>
+    <td>String(fade, slide...)</td>
     <td>fade</td>
+  </tr>
+  <tr>
+    <th>customLoading</th>
+    <td>Boolean</td>
     <td>undefined</td>
   </tr>
 </table>
@@ -211,7 +217,7 @@ function App() {
 }
 ```
 
-#### CSS loading
+#### CSS loading (under v3.x.x) methods for old versions
 
 Packages you need
 

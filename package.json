@@ -2,7 +2,8 @@
   "name": "react-preloaders",
   "version": "2.1.4",
   "description": "🌌Package for adding preloaders to your React apps",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "author": "Gegham Samvelyan (VamOSGS)",
   "license": "MIT",
   "scripts": {
@@ -12,7 +13,8 @@
     "start:demo": "cd ./demo && yarn start",
     "lint": "eslint src",
     "lint_fix": "eslint src --fix",
-    "test": "jest"
+    "test": "jest",
+    "build:exp": "rm -rf dist && cross-env NODE_ENV=production ./node_modules/.bin/babel src/ --out-dir dist --copy-files --ignore __tests__,css,test.js,__snapshots__,setupTests.js"
   },
   "jest": {
     "snapshotSerializers": [
@@ -44,14 +46,15 @@
   },
   "homepage": "https://vamosgs.github.io/react-preloaders/",
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
-    "babel-cli": "^6.26.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.5",
