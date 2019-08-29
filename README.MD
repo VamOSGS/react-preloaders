@@ -42,6 +42,24 @@ function App() {
   );
 }
 ```
+### Your components as preloader
+Here is example how you can use your components as prelaoder:
+
+```jsx
+import React from 'react';
+import { CustomPreloader } from 'react-preloaders';
+
+function App() {
+  return (
+    <React.Fragment>
+      <YourApp />
+         <CustomPreloader>
+                 YOUR CUSTOM PRELOADER COMPONENT
+         </CustomPreloader>
+    </React.Fragment>
+  );
+}
+```
 
 ### Properties (Props)
 
