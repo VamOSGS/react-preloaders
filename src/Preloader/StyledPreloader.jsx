@@ -41,7 +41,7 @@ function Preloader({
         setLoading(false);
       }, time);
     }
-    if (customLoading === undefined) {
+    else if (customLoading === undefined) {
       document.onreadystatechange = () => {
         if (document.readyState === 'complete') {
           setTimeout(() => {
@@ -50,6 +50,10 @@ function Preloader({
         }
       };
     }
+    else if (customLoading === true) {
+      setLoading(true);
+    }
+
   }, [customLoading]);
   useEffect(() => {
     if (background === 'blur') {
