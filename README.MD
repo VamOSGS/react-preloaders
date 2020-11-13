@@ -43,7 +43,7 @@ function App() {
 }
 ```
 ### Your components as preloader
-Here is example how you can use your components as prelaoder:
+Here is example how you can use your components as preloader:
 
 ```jsx
 import React from 'react';
